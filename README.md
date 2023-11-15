@@ -43,6 +43,6 @@ For any additional questions or feedback, please contact Klajdi Dhana at [klajdi
 
 ## Authors
 - **Author Name**
-  - [GitHub Profile](https://github.com/Klajdi2004)
-  - [GitHub Profile](https://github.com/Patr1k00)
+  - [Klajdi2004](https://github.com/Klajdi2004)
+  - [Patr1k00](https://github.com/Patr1k00)
 ---
