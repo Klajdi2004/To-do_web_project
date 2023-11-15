@@ -39,8 +39,10 @@ Contributions to this project are welcome. Please follow these steps to contribu
 [Specify the license or if it's open-source, you can use licenses like MIT, GPL, etc.]
 
 ## Contact
-For any additional questions or feedback, please contact [Klajdi Dhana] at [klajdi.dhana1@gmail.com].
+For any additional questions or feedback, please contact Klajdi Dhana at [klajdi.dhana1@gmail.com], Patrik Shalsi at [shalsipatrik00@gmail.com]  .
 
+## Authors
+- **Author Name**
+  - [GitHub Profile](https://github.com/Klajdi2004)
+  - [GitHub Profile](https://github.com/Patr1k00)
 ---
-
-© 2023 [Klajdi Dhana]. All Rights Reserved.
