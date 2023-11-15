@@ -12,8 +12,8 @@ This To-Do Web Project is a simple, user-friendly web application designed for m
 ## Technologies Used
 - HTML
 - CSS
-- JavaScript
-- [Any other technologies used]
+- Flask
+- SQLite
 
 ## Installation and Setup
 To set up this project locally, follow these steps:
