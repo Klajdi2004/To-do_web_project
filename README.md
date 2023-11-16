@@ -19,7 +19,7 @@ This To-Do Web Project is a simple, user-friendly web application designed for m
 To set up this project locally, follow these steps:
 1. Clone the repository: git clone https://github.com/Klajdi2004/To-do_web_project.git
 2. Navigate to the project directory: cd To-do_web_project
-3. [Any additional steps like 'npm install' if you're using Node.js, etc.]
+3. Run on local host: python app.py
 
 ## How to Use
 1. Open the application in your web browser.
@@ -34,9 +34,6 @@ Contributions to this project are welcome. Please follow these steps to contribu
 3. Make your changes and commit them: git commit -m 'Add some feature'
 4. Push to the branch: git push origin new-feature
 5. Submit a pull request.
-
-## License
-[Specify the license or if it's open-source, you can use licenses like MIT, GPL, etc.]
 
 ## Contact
 For any additional questions or feedback, please contact Klajdi Dhana at [klajdi.dhana1@gmail.com], Patrik Shalsi at [shalsipatrik00@gmail.com]  .
