@@ -1,39 +1,109 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  </head>
-  <body>
-    <div class="parent border">
-        <header class="bg-warning m-2">
-            <h1 class="text-center p-3">To Do !!<h1>
+    <title>Impressive To-Do List</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <style>
+        body {
+            background: linear-gradient(135deg, #2E86C1, #E74C3C);
+            color: #ECF0F1;
+            font-family: 'Quicksand', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        main {
+            background-color: #FFFFFF;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            width: 80%;
+            max-width: 600px;
+            margin: 20px;
+        }
+        header {
+            background-color: #3498DB;
+            border-radius: 10px 10px 0 0;
+            padding: 20px;
+            text-align: center;
+        }
+        h1 {
+            color: #FFFFFF;
+            font-size: 2rem;
+        }
+        form {
+            padding: 20px;
+        }
+        label {
+            color: #2C3E50;
+        }
+        section {
+            border: 2px solid #3498DB;
+            border-radius: 0 0 10px 10px;
+            padding: 20px;
+        }
+        hr {
+            border-color: #3498DB;
+        }
+        .btn-warning {
+            background-color: #F39C12;
+            border-color: #F39C12;
+        }
+        .btn-danger {
+            background-color: #C0392B;
+            border-color: #C0392B;
+        }
+        table {
+            width: 100%;
+        }
+        table td {
+            color: #333;
+        }
+        @media (max-width: 576px) {
+            main {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Impressive To-Do List</h1>
         </header>
-
-        <form action='/inserttask' method="POST" class="mb-5 container border">
-            <div class="mb-3 container">
-              <label for="taskfield" class="form-label">Enter Today's task</label>
-              <input type="text" class="form-control" id="taskfield" name ="todaystask">
+        <form action='/inserttask' method="POST">
+            <div class="mb-3">
+                <label for="taskfield" class="form-label">Enter Today's Task</label>
+                <input type="text" class="form-control" id="taskfield" name="todaystask">
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-lg btn-warning m-2">Submit</button>
+                <button type="submit" class="btn btn-lg btn-warning">Submit</button>
             </div>
         </form>
-
-        <div class="container border">
-          <h4>All Task list</h4><hr/>
-          {% for eachtask in alltasks%}
-          <div class="d-flex justify-content-between mb-2 text-decoration-underline p-3">
-            <div> {{eachtask['task'] }} </div> 
-            <a href="{{ url_for('deletetask', id = eachtask['id'])}}" class="btn btn-sm bg-danger text-light">Clear</a>
-          </div>
-          {% endfor %}
-        </div>
-    </div>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-  </body>
+        <section>
+            <h4>All Task List</h4>
+            <hr />
+            <table class="table">
+                <tbody>
+                    {% for eachtask in alltasks %}
+                    <tr>
+                        <td>{{ eachtask['task'] }}</td>
+                        <td><a href="{{ url_for('deletetask', id=eachtask['id']) }}" class="btn btn-sm btn-danger">Clear</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</body>
 </html>
